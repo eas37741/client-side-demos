@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Beans are amazing</h1>
+    <h2><small>Click the button to add to the bean basket, it will wait for however many beans are in the basket before saying the amount in the basket</small></h2>
+    <p>
+    <button onclick="beanTimer();"><em><b>Add to the bean count</b></em> </button> 
+    </p>
+</body>
+<script>
+    let beanAmount = 0; 
+    function beanCount() {
+        
+    }
+
+    function beanTimer() {
+        beanAmount += 1;
+        console.log(beanAmount);
+        setTimeout(doEndTimer,beanAmount*1000);
+        return beanAmount
+    }
+
+    function doEndTimer() {
+        if (beanAmount == 1) {
+        alert("There is "+ beanAmount + " Bean in the basket now" );
+        }
+        else {
+        alert("There are "+ beanAmount + " Beans in the basket now" );
+        }
+    }
+</script>
+</html>
